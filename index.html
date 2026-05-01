@@ -48,20 +48,25 @@
             <!-- Logo: opzionale; sostituire src o rimuovere il blocco -->
             <!-- <img style="height:6vw; margin-bottom: 3px;" src="assets/images/logo.png" alt="Logo"> -->
 
-            <h1 class="title is-2 publication-title">Titolo del paper / progetto</h1>
-            <h2 class="title is-6 publication-title">Venue e anno (es. Conference 20XX)</h2>
-
-            <p class="is-size-7 has-text-grey mb-3">Sostituisci il titolo sopra; la riga venue è opzionale (conferenza, journal, workshop).</p>
+            <h1 class="title is-2 publication-title">Learning Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning</h1>
+            <h2 class="title is-6 publication-title">Submitted to Robocup International Symposium 2026</h2>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><i>Authors</i></span>
+              <span class="author-block"><i>Flavio Maiorana<sup>1</sup>,</i></span>
+              <span class="author-block"><i>Valerio Spagnoli<sup>1</sup>,</i></span>
+              <span class="author-block"><i>Eugenio Bugli<sup>1</sup>,</i></span>
+              <span class="author-block"><i>Flavio Volpi<sup>2</sup>,</i></span>
+              <span class="author-block"><i>Daniele Affinita<sup>3</sup>,</i></span>
+              <span class="author-block"><i>Vincenzo Suriani<sup>1</sup>,</i></span>
+              <span class="author-block"><i>Daniele Nardi<sup>1</sup> and</i></span>
+              <span class="author-block"><i>Luca Iocchi<sup>1</sup></i></span>
             </div>
-            <p class="is-size-7 has-text-grey mb-3">Sostituisci <i>Authors</i> con l’elenco (es. più <code>span.author-block</code> con nome, link opzionale, apice affiliazione).</p>
 
             <div class="is-size-6 publication-authors">
-              <span class="author-block">Affiliazione / istituzioni (usa <sup>1</sup> negli autori se servono più sedi)</span>
+              <span class="author-block"><sup>1</sup>Dept. of Computer, Control, and Management Engineering\\ Sapienza University of Rome, Rome (Italy),</span>
+              <span class="author-block"><sup>2</sup>Institut de Robòtica i Informàtica Industrial (CSIC-UPC), C/ Llorens i Artigas 4-6, 08028, Barcelona, Spain,</span>
+              <span class="author-block"><sup>3</sup>École Polytechnique Fédérale de Lausanne (EPFL), Lausanne, Switzerland,</span>
             </div>
-            <p class="is-size-7 has-text-grey mb-4">Una riga per istituzione o unica affiliazione per tutti.</p>
 
             <div class="column has-text-centered">
               <div class="publication-links">
@@ -95,17 +100,16 @@
   <section class="section py-5" id="video">
     <div class="container is-max-desktop">
       <h2 class="title is-4 has-text-centered">Video</h2>
-      <p class="is-size-7 has-text-grey has-text-centered mb-4">
+      <!-- <p class="is-size-7 has-text-grey has-text-centered mb-4">
         Subito sotto titolo e link: inserisci qui il teaser o il video principale (MP4 consigliato; oppure embed YouTube/Vimeo sostituendo il blocco <code>&lt;video&gt;</code> con un <code>iframe</code>).
-      </p>
+      </p> -->
       <div class="columns is-centered">
         <div class="column is-10-desktop is-12-tablet">
           <figure class="has-text-centered">
             <video controls playsinline style="width:100%; max-height:70vh;">
               <source src="assets/videos/video.mp4" type="video/mp4">
-              Il browser non supporta il tag video.
             </video>
-            <figcaption class="is-size-7 has-text-grey mt-3">Didascalia opzionale (cosa mostra il video).</figcaption>
+            <!-- <figcaption class="is-size-7 has-text-grey mt-3">Didascalia opzionale (cosa mostra il video).</figcaption> -->
           </figure>
         </div>
       </div>
@@ -127,11 +131,28 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
-          <p class="is-size-7 has-text-grey mb-4">Problema, idea principale, metodo in sintesi, risultato chiave (numeri se ci sono). Lunghezza tipica: 150–250 parole per paper; per progetto web può essere più corto.</p>
+          <!-- <p class="is-size-7 has-text-grey mb-4">Problema, idea principale, metodo in sintesi, risultato chiave (numeri se ci sono). Lunghezza tipica: 150–250 parole per paper; per progetto web può essere più corto.</p> -->
           <div class="content has-text-justified">
             <p>
-              [Inserisci qui l’abstract: contesto, gap, contributo, risultati principali e takeaway per il lettore.]
-            </p>
+              Recent advances in humanoid robotics have highlighted the importance of
+              deployable loco-manipulation skills. Dribbling a soccer ball while
+              evading active opponents requires simultaneous balance, precise ball control,
+              and awareness of a dynamic adversary under onboard sensing and real-time
+              constraints. Existing approaches typically separate perception and motion,
+              which can be effective in controlled settings but may fail under occlusions,
+              fast ball movements, and complex opponent interactions, since perception is not
+              directly optimized for control.
+              We propose an integrated approach in which a temporal depth encoder is embedded
+              into a reinforcement learning policy through a task-specific projection layer.
+              We apply this framework to a simulated Booster T1 humanoid robot and show that it is possible to learn vision-based, opponent-aware dribbling directly from depth
+              observations, without explicit state estimation or privileged scene
+              information. The learned policy achieves (100%) success in nominal
+              target-driven dribbling and (96%) success with a single static obstacle,
+              while reaching (46%) success against an actively moving ball-attacker
+              opponent. These results demonstrate that the proposed framework supports robust
+              vision-based dribbling in nominal and moderately dynamic settings, and provides
+              a strong foundation for handling more challenging moving-adversary scenarios.
+                          </p>
           </div>
         </div>
       </div>
@@ -142,8 +163,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Introduzione</h2>
-          <p class="is-size-7 has-text-grey mb-4">Motivazione, contesto applicativo, cosa mancava nello stato dell’arte e quali domande affronti.</p>
+          <h2 class="title is-3">Introduction</h2>
+          <!-- <p class="is-size-7 has-text-grey mb-4">Motivazione, contesto applicativo, cosa mancava nello stato dell’arte e quali domande affronti.</p> -->
           <div class="content has-text-justified">
             <p>[Testo introduzione.]</p>
           </div>
@@ -156,8 +177,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Metodo</h2>
-          <p class="is-size-7 has-text-grey mb-4">Architettura, notazione se serve, training o pipeline; figure che guidano passo passo.</p>
+          <h2 class="title is-3">Methodology</h2>
+          <!-- <p class="is-size-7 has-text-grey mb-4">Architettura, notazione se serve, training o pipeline; figure che guidano passo passo.</p> -->
           <div class="content has-text-justified">
             <p>[Descrizione del metodo.]</p>
           </div>
@@ -170,8 +191,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Esperimenti e risultati</h2>
-          <p class="is-size-7 has-text-grey mb-4">Setup, metriche, confronti con baseline, analisi qualitative (tabelle, grafici, link a pagine demo se servono).</p>
+          <h2 class="title is-3">Experimental Results</h2>
+          <!-- <p class="is-size-7 has-text-grey mb-4">Setup, metriche, confronti con baseline, analisi qualitative (tabelle, grafici, link a pagine demo se servono).</p> -->
           <div class="content has-text-justified">
             <p>[Risultati e discussione.]</p>
           </div>
@@ -184,8 +205,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Conclusioni</h2>
-          <p class="is-size-7 has-text-grey mb-4">Riassunto contributi, limiti, lavoro futuro.</p>
+          <h2 class="title is-3">Conclusions</h2>
+          <!-- <p class="is-size-7 has-text-grey mb-4">Riassunto contributi, limiti, lavoro futuro.</p> -->
           <div class="content has-text-justified">
             <p>[Conclusioni.]</p>
           </div>
@@ -197,14 +218,12 @@
   <section class="section" id="references">
     <div class="container is-max-desktop content">
       <h2 class="title is-3">Riferimenti (BibTeX)</h2>
-      <p class="is-size-7 has-text-grey mb-4">Blocco BibTeX per citare il lavoro da repository o articoli; aggiorna chiave, titolo, autori, venue, anno, DOI/arXiv.</p>
-      <pre><code>@article{chiave2026titolo,
-  title={Titolo completo del lavoro},
-  author={Authors},
-  journal={Nome venue},
-  year={2026},
-  url={https://example.org/paper}
-}</code></pre>
+      <!-- <p class="is-size-7 has-text-grey mb-4">Blocco BibTeX per citare il lavoro da repository o articoli; aggiorna chiave, titolo, autori, venue, anno, DOI/arXiv.</p> -->
+      <pre><code>@article{maiorana2026learning,
+  title={Learning Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning},
+  author={Maiorana, Flavio and Spagnoli, Valerio and Bugli, Eugenio and Volpi, Flavio and Affinita, Daniele and Suriani, Vincenzo and Nardi, Daniele and Iocchi, Luca},
+  <!-- journal={Nome venue}, -->year={2026}
+  <!-- url={https://example.org/paper} -->}</code></pre>
     </div>
   </section>
 
