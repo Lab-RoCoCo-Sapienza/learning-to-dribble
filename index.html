@@ -63,8 +63,8 @@
             </div>
 
             <div class="is-size-6 publication-authors">
-              <span class="author-block"><sup>1</sup>Dept. of Computer, Control, and Management Engineering\\ Sapienza University of Rome, Rome (Italy),</span>
-              <span class="author-block"><sup>2</sup>Institut de Robòtica i Informàtica Industrial (CSIC-UPC), C/ Llorens i Artigas 4-6, 08028, Barcelona, Spain,</span>
+              <span class="author-block"><sup>1</sup>Dept. of Computer, Control, and Management Engineering Sapienza University of Rome, Rome (Italy),</span>
+              <span class="author-block"><sup>2</sup>Institut de Robòtica i Informàtica Industrial (CSIC-UPC), C Llorens i Artigas 4-6, 08028, Barcelona, Spain,</span>
               <span class="author-block"><sup>3</sup>École Polytechnique Fédérale de Lausanne (EPFL), Lausanne, Switzerland,</span>
             </div>
 
@@ -89,43 +89,41 @@
                   </a>
                 </span>
               </div>
-              <p class="is-size-7 has-text-grey mt-2">Sostituisci <code>href="#"</code> con PDF, arXiv e repository.</p>
+              <!-- <p class="is-size-7 has-text-grey mt-2">Sostituisci <code>href="#"</code> con PDF, arXiv e repository.</p> -->
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+<!-- 
   <section class="section py-5" id="video">
     <div class="container is-max-desktop">
       <h2 class="title is-4 has-text-centered">Video</h2>
-      <!-- <p class="is-size-7 has-text-grey has-text-centered mb-4">
+      <p class="is-size-7 has-text-grey has-text-centered mb-4">
         Subito sotto titolo e link: inserisci qui il teaser o il video principale (MP4 consigliato; oppure embed YouTube/Vimeo sostituendo il blocco <code>&lt;video&gt;</code> con un <code>iframe</code>).
-      </p> -->
+      </p>
       <div class="columns is-centered">
         <div class="column is-10-desktop is-12-tablet">
           <figure class="has-text-centered">
             <video controls playsinline style="width:100%; max-height:70vh;">
               <source src="assets/videos/video.mp4" type="video/mp4">
             </video>
-            <!-- <figcaption class="is-size-7 has-text-grey mt-3">Didascalia opzionale (cosa mostra il video).</figcaption> -->
+            <figcaption class="is-size-7 has-text-grey mt-3">Didascalia opzionale (cosa mostra il video).</figcaption>
           </figure>
         </div>
       </div>
     </div>
-  </section>
-
+  </section> -->
   <!-- Teaser: figura o video principale + didascalia breve -->
-  <section class="section py-5">
+  <!-- <section class="section py-5">
     <div class="container is-max-desktop">
       <h2 class="title is-4 has-text-centered">Teaser</h2>
       <p class="is-size-7 has-text-grey has-text-centered mb-4">Un’immagine ampia o uno schema del metodo; sotto, 2–3 frasi che spiegano cosa si vede.</p>
-      <!-- Esempio immagine: decommenta e imposta il percorso -->
-      <!-- <figure class="has-text-centered"><img src="assets/teaser.png" alt="Teaser" style="max-width:100%;"><figcaption class="is-size-6 mt-2">Didascalia.</figcaption></figure> -->
+      Esempio immagine: decommenta e imposta il percorso
+      <figure class="has-text-centered"><img src="assets/teaser.png" alt="Teaser" style="max-width:100%;"><figcaption class="is-size-6 mt-2">Didascalia.</figcaption></figure>
     </div>
-  </section>
-
+  </section> -->
   <section class="section py-5">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -159,19 +157,19 @@
     </div>
   </section>
 
-  <section class="section py-5">
+  <!-- <section class="section py-5">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Introduction</h2>
-          <!-- <p class="is-size-7 has-text-grey mb-4">Motivazione, contesto applicativo, cosa mancava nello stato dell’arte e quali domande affronti.</p> -->
+          <p class="is-size-7 has-text-grey mb-4">Motivazione, contesto applicativo, cosa mancava nello stato dell’arte e quali domande affronti.</p>
           <div class="content has-text-justified">
             <p>[Testo introduzione.]</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="section py-5">
     <div class="container is-max-desktop">
@@ -180,7 +178,28 @@
           <h2 class="title is-3">Methodology</h2>
           <!-- <p class="is-size-7 has-text-grey mb-4">Architettura, notazione se serve, training o pipeline; figure che guidano passo passo.</p> -->
           <div class="content has-text-justified">
-            <p>[Descrizione del metodo.]</p>
+            <p>
+              <div class="content has-text-centered">
+                <figure>
+                  <img src="curriculum.png" alt="Curriculum-based training schedule" style="max-width:100%;">
+                  <figcaption class="is-size-6 mt-2">
+                    <b>Curriculum-based training schedule.</b>
+                    The policy is first trained through progressively harder stages, from ball approach to dynamic opponent interaction, and then a visual encoder is trained to reproduce the learned latent from depth observations, while keeping the policy frozen.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="content has-text-centered">
+                <figure>
+                  <img src="architecture.png" alt="Curriculum-based training schedule" style="max-width:100%;">
+                  <figcaption class="is-size-6 mt-2">
+                    <b>Overview of the two-phase framework.</b> 
+                    In Phase 1, a privileged encoder maps ground-truth ball and obstacle states to a latent representation used by the policy. In Phase 2, a visual encoder predicts the same latent from depth observations, enabling deployment with onboard sensing only.
+                  </figcaption>
+                </figure>
+              </div>
+
+            </p>
           </div>
         </div>
       </div>
@@ -194,7 +213,139 @@
           <h2 class="title is-3">Experimental Results</h2>
           <!-- <p class="is-size-7 has-text-grey mb-4">Setup, metriche, confronti con baseline, analisi qualitative (tabelle, grafici, link a pagine demo se servono).</p> -->
           <div class="content has-text-justified">
-            <p>[Risultati e discussione.]</p>
+            <p>
+              <div class="content">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th>Reward Term</th>
+                      <th>Weight</th>
+                      <th>Reward Term</th>
+                      <th>Weight</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Ball velocity tracking</td><td>3.0</td><td>Ball-target reached</td><td>50.0</td></tr>
+                    <tr><td>Ball speed tracking</td><td>2.0</td><td>Robot-obstacle collision</td><td>-10.0</td></tr>
+                    <tr><td>Ball heading tracking</td><td>2.0</td><td>Ball-obstacle collision</td><td>-10.0</td></tr>
+                    <tr><td>Robot-ball distance</td><td>0.05</td><td>Foot slip</td><td>-0.1</td></tr>
+                    <tr><td>Robot-ball yaw</td><td>2.0</td><td>Upright</td><td>1.0</td></tr>
+                    <tr><td>Ball-target progress</td><td>2.0</td><td>Body angular velocity</td><td>-0.05</td></tr>
+                    <tr><td>Swing phase</td><td>3.0</td><td>Angular momentum</td><td>-0.5</td></tr>
+                    <tr><td>Stance phase</td><td>2.0</td><td>DoF position limits</td><td>-1.0</td></tr>
+                    <tr><td>Pose arms</td><td>1.0</td><td>Action rate (L2)</td><td>-0.1</td></tr>
+                    <tr><td>Pose legs</td><td>1.0</td><td>Foot swing height</td><td>-0.25</td></tr>
+                    <tr><td>Feet distance</td><td>-6.0</td><td>Soft landing</td><td>-1e-5</td></tr>
+                    <tr><td>Foot-foot contact</td><td>-5.0</td><td>Self-collisions</td><td>-1.0</td></tr>
+                    <tr><td>Nonfoot-ball contact</td><td>-2.0</td><td></td><td></td></tr>
+                  </tbody>
+                </table>
+                <p class="has-text-centered is-size-6">
+                  <b>Table.</b> Reward terms and weights for training the dribbling policy.
+                </p>
+              </div>
+
+              <div class="content">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth is-size-7">
+                  <thead>
+                    <tr>
+                      <th>Condition</th>
+                      <th>SR [%]</th>
+                      <th>T2T [s]</th>
+                      <th>T2T-C [s]</th>
+                      <th>FR [%]</th>
+                      <th>LR [%]</th>
+                      <th>RCR [%]</th>
+                      <th>RC/t</th>
+                      <th>BCR [%]</th>
+                      <th>BC/t</th>
+                      <th>MBC [m]</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>No obstacles</td><td>100.00</td><td>11.45</td><td>11.45</td><td>0.00</td><td>0.00</td>
+                      <td>--</td><td>--</td><td>--</td><td>--</td><td>--</td>
+                    </tr>
+                    <tr>
+                      <td>Static obstacle</td><td>96.00</td><td>13.29</td><td>13.95</td><td>4.00</td><td>0.00</td>
+                      <td>8.00</td><td>0.08</td><td>4.00</td><td>0.10</td><td>1.73</td>
+                    </tr>
+                    <tr>
+                      <td>Ball attacker</td><td>46.00</td><td>11.82</td><td>21.64</td><td>52.00</td><td>2.00</td>
+                      <td>68.00</td><td>0.72</td><td>40.00</td><td>0.70</td><td>1.36</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="has-text-centered is-size-6"><b>Table.</b> Final-policy main task evaluation.</p>
+              </div>
+
+              <div class="content">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth is-size-7">
+                  <thead>
+                    <tr>
+                      <th>Condition</th>
+                      <th>Segment</th>
+                      <th>e_vec [m/s]</th>
+                      <th>e_spd [m/s]</th>
+                      <th>e_ang [deg]</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>No obstacles</td><td>All timesteps</td><td>0.71</td><td>0.62</td><td>28.39</td></tr>
+                    <tr><td>Static obstacle</td><td>Unblocked</td><td>0.74</td><td>0.62</td><td>35.62</td></tr>
+                    <tr><td>Static obstacle</td><td>Blocked</td><td>0.74</td><td>0.60</td><td>33.96</td></tr>
+                    <tr><td>Ball attacker</td><td>Unblocked</td><td>0.74</td><td>0.61</td><td>34.27</td></tr>
+                    <tr><td>Ball attacker</td><td>Blocked</td><td>0.79</td><td>0.60</td><td>43.00</td></tr>
+                  </tbody>
+                </table>
+                <p class="has-text-centered is-size-6"><b>Table.</b> Velocity-tracking diagnostic for the final policy.</p>
+              </div>
+
+              <div class="content">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth is-size-7">
+                  <thead>
+                    <tr>
+                      <th>Condition</th>
+                      <th>e_ball,pos [m]</th>
+                      <th>e_ball,vel [m/s]</th>
+                      <th>e_obs,pos [m]</th>
+                      <th>e_obs,vel [m/s]</th>
+                      <th>c_fov [%]</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>No obstacles</td><td>0.05</td><td>0.25</td><td>--</td><td>--</td><td>75.43</td></tr>
+                    <tr><td>Static obstacle</td><td>0.05</td><td>0.24</td><td>1.26</td><td>0.21</td><td>76.74</td></tr>
+                    <tr><td>Ball attacker</td><td>0.08</td><td>0.26</td><td>1.26</td><td>0.13</td><td>78.39</td></tr>
+                  </tbody>
+                </table>
+                <p class="has-text-centered is-size-6">
+                  <b>Table.</b> Perception metrics for the final policy.
+                </p>
+              </div>
+
+              <div class="content">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth is-size-7">
+                  <thead>
+                    <tr>
+                      <th>Condition</th>
+                      <th>Stage 1</th>
+                      <th>Stage 2</th>
+                      <th>Stage 3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>No obstacles</td><td>100</td><td>68</td><td>90</td></tr>
+                    <tr><td>Static obstacle</td><td>24</td><td>42</td><td>88</td></tr>
+                    <tr><td>Ball attacker</td><td>2</td><td>2</td><td>46</td></tr>
+                  </tbody>
+                </table>
+                <p class="has-text-centered is-size-6">
+                  <b>Table.</b> Success-rate ablation across curriculum stages (%).
+                </p>
+              </div>
+            </p>
           </div>
         </div>
       </div>
@@ -208,7 +359,32 @@
           <h2 class="title is-3">Conclusions</h2>
           <!-- <p class="is-size-7 has-text-grey mb-4">Riassunto contributi, limiti, lavoro futuro.</p> -->
           <div class="content has-text-justified">
-            <p>[Conclusioni.]</p>
+            <p>
+              This paper presented a visual temporal policy for autonomous humanoid soccer
+              dribbling.
+              The experimental results show that the proposed policy reliably solves nominal
+              target-driven dribbling, achieving (100%) success in the no-obstacle
+              condition, and also performs well in the single static-obstacle setting, where
+              success remains high at (96%). Performance degrades substantially in the
+              ball-attacker setting, where success drops to (46%) and both fall and
+              collision rates increase markedly. This indicates that the main remaining
+              challenge is robust closed-loop control against an actively moving adversary,
+              rather than nominal dribbling itself. The velocity and perception diagnostics
+              support this interpretation: deviations from the commanded ball motion increase
+              during blocked attacker interactions, while perception errors remain relatively
+              stable across conditions.
+
+              Overall, these results suggest that combining temporal visual adaptation with
+              reinforcement learning is a promising approach for humanoid loco-manipulation tasks. However,
+              the current evidence is limited by the small number of independently trained
+              policies and by the fact that all experiments are conducted in simulation.
+
+              Beyond humanoid soccer, the same framework could support other embodied robotic
+              tasks requiring perception-driven control under partial observability. Future
+              work will focus on harder and more diverse opponent behaviors, stronger
+              robustness against moving adversaries, and sim-to-real transfer on the Booster
+              T1 humanoid platform.
+            </p>
           </div>
         </div>
       </div>
