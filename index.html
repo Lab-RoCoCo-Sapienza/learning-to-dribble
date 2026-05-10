@@ -96,34 +96,7 @@
       </div>
     </div>
   </section>
-<!-- 
-  <section class="section py-5" id="video">
-    <div class="container is-max-desktop">
-      <h2 class="title is-4 has-text-centered">Video</h2>
-      <p class="is-size-7 has-text-grey has-text-centered mb-4">
-        Subito sotto titolo e link: inserisci qui il teaser o il video principale (MP4 consigliato; oppure embed YouTube/Vimeo sostituendo il blocco <code>&lt;video&gt;</code> con un <code>iframe</code>).
-      </p>
-      <div class="columns is-centered">
-        <div class="column is-10-desktop is-12-tablet">
-          <figure class="has-text-centered">
-            <video controls playsinline style="width:100%; max-height:70vh;">
-              <source src="assets/videos/video.mp4" type="video/mp4">
-            </video>
-            <figcaption class="is-size-7 has-text-grey mt-3">Didascalia opzionale (cosa mostra il video).</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- Teaser: figura o video principale + didascalia breve -->
-  <!-- <section class="section py-5">
-    <div class="container is-max-desktop">
-      <h2 class="title is-4 has-text-centered">Teaser</h2>
-      <p class="is-size-7 has-text-grey has-text-centered mb-4">Un’immagine ampia o uno schema del metodo; sotto, 2–3 frasi che spiegano cosa si vede.</p>
-      Esempio immagine: decommenta e imposta il percorso
-      <figure class="has-text-centered"><img src="assets/teaser.png" alt="Teaser" style="max-width:100%;"><figcaption class="is-size-6 mt-2">Didascalia.</figcaption></figure>
-    </div>
-  </section> -->
+
   <section class="section py-5">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -193,7 +166,7 @@
                 <figure>
                   <img src="architecture.png" alt="Curriculum-based training schedule" style="max-width:100%;">
                   <figcaption class="is-size-6 mt-2">
-                    <b>Overview of the two-phase framework.</b> 
+                    <b>Overview of the two-phase framework.</b>
                     In Phase 1, a privileged encoder maps ground-truth ball and obstacle states to a latent representation used by the policy. In Phase 2, a visual encoder predicts the same latent from depth observations, enabling deployment with onboard sensing only.
                   </figcaption>
                 </figure>
@@ -386,6 +359,126 @@
               T1 humanoid platform.
             </p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section py-5" id="s0">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4 has-text-centered">Stage 0 - No obstacles</h2>
+      <div class="columns is-centered">
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st0_p1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">With Privileged Information</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st0_p2.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">Without Privileged Information</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section py-5" id="s1">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4 has-text-centered">Stage 1 - Static obstacle</h2>
+      <div class="columns is-centered">
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st1_p1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">With Privileged Information</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st1_p2.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">Without Privileged Information</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section py-5" id="s2">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4 has-text-centered">Stage 2 - Passive attacker</h2>
+      <div class="columns is-centered">
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st2_p1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">With Privileged Information</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st2_p2.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">Without Privileged Information</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section py-5" id="s3">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4 has-text-centered">Stage 3 - Active attacker</h2>
+      <div class="columns is-centered">
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st3_p1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">With Privileged Information</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st3_p2.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">Without Privileged Information</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section py-5" id="s4">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4 has-text-centered">Stage 4 - Multiple Attackers</h2>
+      <div class="columns is-centered">
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st4_p1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">With Privileged Information</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half-tablet is-half-desktop">
+          <figure class="has-text-centered">
+            <video controls playsinline autoplay muted loop style="width:100%; max-height:70vh;">
+              <source src="assets/videos/t1-dribbling-st4_p2.mp4" type="video/mp4">
+            </video>
+            <figcaption class="is-size-7 has-text-grey mt-3">Without Privileged Information</figcaption>
+          </figure>
         </div>
       </div>
     </div>
